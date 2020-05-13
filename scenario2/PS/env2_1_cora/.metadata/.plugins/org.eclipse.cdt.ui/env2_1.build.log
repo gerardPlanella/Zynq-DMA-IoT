@@ -1,0 +1,45 @@
+17:15:10 **** Incremental Build of configuration Debug for project env2_1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env2_1_cora/Env2_1_cora/export/Env2_1_cora/sw/Env2_1_cora/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/user_cdma.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_cdma.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env2_1_cora/Env2_1_cora/export/Env2_1_cora/sw/Env2_1_cora/standalone_domain/bspinclude/include -MMD -MP -MF"src/user_cdma.d" -MT"src/user_cdma.o" -o "src/user_cdma.o" "../src/user_cdma.c"
+Finished building: ../src/user_cdma.c
+ 
+Building file: ../src/user_gpio.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_gpio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env2_1_cora/Env2_1_cora/export/Env2_1_cora/sw/Env2_1_cora/standalone_domain/bspinclude/include -MMD -MP -MF"src/user_gpio.d" -MT"src/user_gpio.o" -o "src/user_gpio.o" "../src/user_gpio.c"
+Finished building: ../src/user_gpio.c
+ 
+Building file: ../src/user_interrupts.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_interrupts.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env2_1_cora/Env2_1_cora/export/Env2_1_cora/sw/Env2_1_cora/standalone_domain/bspinclude/include -MMD -MP -MF"src/user_interrupts.d" -MT"src/user_interrupts.o" -o "src/user_interrupts.o" "../src/user_interrupts.c"
+Finished building: ../src/user_interrupts.c
+ 
+Building file: ../src/user_tests.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_tests.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env2_1_cora/Env2_1_cora/export/Env2_1_cora/sw/Env2_1_cora/standalone_domain/bspinclude/include -MMD -MP -MF"src/user_tests.d" -MT"src/user_tests.o" -o "src/user_tests.o" "../src/user_tests.c"
+Finished building: ../src/user_tests.c
+ 
+Building target: env2_1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env2_1_cora/Env2_1_cora/export/Env2_1_cora/sw/Env2_1_cora/standalone_domain/bsplib/lib -o "env2_1.elf"  ./src/main.o ./src/user_cdma.o ./src/user_gpio.o ./src/user_interrupts.o ./src/user_tests.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: env2_1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size env2_1.elf  |tee "env2_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79936	   3432	  23776	 107144	  1a288	env2_1.elf
+Finished building: env2_1.elf.size
+ 
+
+17:15:13 Build Finished (took 3s.139ms)
+

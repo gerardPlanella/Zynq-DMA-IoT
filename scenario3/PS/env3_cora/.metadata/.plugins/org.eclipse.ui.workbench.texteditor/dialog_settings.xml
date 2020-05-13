@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="initialDmaLength" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="initialDmaLength"/>
+			<item value="init_memories"/>
+			<item value="testvar"/>
+			<item value="WORD"/>
+			<item value="Random"/>
+			<item value="Ranom"/>
+			<item value="Reset"/>
+			<item value="reset"/>
+			<item value="7C"/>
+			<item value="Traffic"/>
+			<item value="intr"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="338" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="172" key="DIALOG_HEIGHT"/>
+		<item value="1369" key="DIALOG_X_ORIGIN"/>
+		<item value="538" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

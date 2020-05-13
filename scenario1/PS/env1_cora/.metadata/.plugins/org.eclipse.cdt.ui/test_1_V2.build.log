@@ -1,0 +1,68 @@
+14:40:25 **** Incremental Build of configuration Debug for project test_1_V2 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/sw/env1_cora/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'visualizeFloat':
+../src/main.c:34:5: warning: 'main' is normally a non-static function [-Wmain]
+ int main()
+     ^~~~
+../src/main.c: In function 'main':
+../src/main.c:38:9: warning: unused variable 'average' [-Wunused-variable]
+  Result average[SUB_TESTS];
+         ^~~~~~~
+../src/main.c: In function 'visualizeFloat':
+../src/main.c:99:5: error: static declaration of 'system_setup' follows non-static declaration
+ int system_setup(void){
+     ^~~~~~~~~~~~
+../src/main.c:26:5: note: previous declaration of 'system_setup' was here
+ int system_setup(void);
+     ^~~~~~~~~~~~
+../src/main.c:126:5: error: static declaration of 'peripheral_test' follows non-static declaration
+ int peripheral_test(void){
+     ^~~~~~~~~~~~~~~
+../src/main.c:32:5: note: previous declaration of 'peripheral_test' was here
+ int peripheral_test(void);
+     ^~~~~~~~~~~~~~~
+../src/main.c:137:6: error: static declaration of 'test_counter_delay' follows non-static declaration
+src/subdir.mk:39: recipe for target 'src/main.o' failed
+ void test_counter_delay(char counter, int N){
+makefile:33: recipe for target 'all' failed
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:28:6: note: previous declaration of 'test_counter_delay' was here
+ void test_counter_delay(char counter, int N);
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:162:5: error: static declaration of 'test_fifo' follows non-static declaration
+ int test_fifo(void){
+     ^~~~~~~~~
+../src/main.c:30:5: note: previous declaration of 'test_fifo' was here
+ int test_fifo(void);
+     ^~~~~~~~~
+../src/main.c:201:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/main.c:162:5: warning: 'test_fifo' defined but not used [-Wunused-function]
+ int test_fifo(void){
+     ^~~~~~~~~
+../src/main.c:137:6: warning: 'test_counter_delay' defined but not used [-Wunused-function]
+ void test_counter_delay(char counter, int N){
+      ^~~~~~~~~~~~~~~~~~
+../src/main.c:126:5: warning: 'peripheral_test' defined but not used [-Wunused-function]
+ int peripheral_test(void){
+     ^~~~~~~~~~~~~~~
+../src/main.c:99:5: warning: 'system_setup' defined but not used [-Wunused-function]
+ int system_setup(void){
+     ^~~~~~~~~~~~
+../src/main.c:34:5: warning: 'main' defined but not used [-Wunused-function]
+ int main()
+     ^~~~
+make[1]: *** [src/main.o] Error 1
+make: *** [all] Error 2
+
+14:40:25 Build Finished (took 168ms)
+

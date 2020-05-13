@@ -1,0 +1,77 @@
+/*
+ * user_gpio.h
+ *
+ *  Created on: Mar 6, 2020
+ *      Author: Gerard Planella
+ */
+
+#ifndef SRC_USER_GPIO_H_
+#define SRC_USER_GPIO_H_
+
+#include "xgpio.h"
+#include "xparameters.h"
+#include "xstatus.h"
+#include "xil_types.h"
+
+#define GPIO_INSTANCES 4
+
+#define FIFO_WRITE_CNT 0x01
+#define FIFO_READ_CNT 0x02
+#define FIFO_FULL 0x04
+#define FIFO_EMPTY 0x08
+
+#define LED_R 0x01
+#define LED_G 0x02
+#define LED_B 0x04
+#define LED_OFF 0x00
+
+
+#define FIFO_DATA_DEVICE_ID 	XPAR_AXI_GPIO_0_DEVICE_ID
+#define COUNTER_VALUE_ID 		XPAR_AXI_GPIO_1_DEVICE_ID
+#define FIFO_SIGNALS_DEVICE_ID 	XPAR_AXI_GPIO_2_DEVICE_ID
+#define COUNTER_1_SIGNALS_ID 	XPAR_AXI_GPIO_3_DEVICE_ID
+#define COUNTER_2_SIGNALS_ID 	XPAR_AXI_GPIO_4_DEVICE_ID
+#define FIFO_RESET_DEVICE_ID 	XPAR_AXI_GPIO_5_DEVICE_ID
+#define LED_DEVICE_ID 			XPAR_AXI_GPIO_6_DEVICE_ID
+
+
+
+#define COUNTER_NOPTION 0x00
+#define COUNTER_ENABLE 0x01
+#define COUNTER_SRESET 0x02
+
+
+typedef struct{
+	char empty;
+	char full;
+	u32  write_count;
+	u32  read_count;
+}FifoParams;
+
+//Initializes a GPIO controller for each GPIO instance
+int user_gpio_init(void);
+//Reads from a specific channel in a GPIO with id = device_id
+int user_gpio_read(u16 device_id, char channel, u32* data);
+//Writes "data" to a specific channel in a GPIO with id = device_id
+int user_gpio_write(u16 device_id, char channel, u32 data);
+//Get the count value for counters 1 or 2
+int user_gpio_get_count(u16 *count, char counter);
+//Set the Enable and reset values for counters 1 or 2
+int user_gpio_set_counter(char counter, char request);
+
+int user_gpio_set_led(char led, char request);
+/*
+ * Reads the FIFO parameters:
+ * e.g- user_gpio_get_fifo(&fifo, FIFO_WRITE_CNT | FIFO_FULL);
+ */
+int user_gpio_get_fifo(FifoParams *fifo, char request);
+
+//Resets the FIFO
+int user_gpio_reset_fifo(void);
+
+
+
+
+
+
+#endif /* SRC_USER_GPIO_H_ */

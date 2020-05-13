@@ -1,0 +1,7 @@
+14:30:28 **** Clean-only build of configuration Debug for project hello_world ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o ./src/ps7_init.o  ./src/helloworld.d ./src/platform.d ./src/ps7_init.d  hello_world.elf.size  hello_world.elf
+ 
+
+14:30:28 Build Finished (took 67ms)
+

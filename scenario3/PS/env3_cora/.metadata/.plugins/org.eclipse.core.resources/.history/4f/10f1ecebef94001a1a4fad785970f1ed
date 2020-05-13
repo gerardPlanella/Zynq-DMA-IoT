@@ -1,0 +1,238 @@
+/*H**********************************************************************
+* FILENAME :        main.c             DESIGN REF: E1T1
+*
+* DESCRIPTION :
+*       Main file for test in environment 1
+*
+* AUTHOR :    Gerard Planella        START DATE :    6 Mar 2020
+*
+*H*/
+
+#include <stdio.h>
+
+#include "xparameters.h"
+#include "xdebug.h"
+#include "xil_types.h"
+
+/*---- User Libraries ---- */
+#include "user_gpio.h"
+#include "user_dma.h"
+#include "user_tests.h"
+#include "user_trafgen.h"
+
+/*
+ * Select Order of execution
+ */
+#define TEST_PEAKS 1
+#define TEST_CONST 0
+#define TEST_RAND  2 //Unused
+
+#define ACTIVE_PACKET_LENGTH 5
+#define PEAKS_LENGTH 3
+
+#define MAX_TRIES 5
+
+//#define LATENCY //Uncomment to perform latency test
+
+//Configures the system, peripherals and interrupts
+int system_setup(void);
+
+//int test_fifo(u32 address);
+int peripheral_test(u32 address);
+
+int main()
+{
+	int status, i, j, k, tries;
+
+	//Result Variables
+#ifdef LATENCY
+	Result results_latency[TESTS_LATENCY];
+	Result average_latency;
+#else
+	Result results_modes[MODES][COMBINATIONS_PEAKS][TESTS_S2MM];
+	Result average_modes[MODES][COMBINATIONS_PEAKS];
+
+	//Test Combinations and variables
+	u32 transfer_packets[6] = {10*K, 100*K, 500*K, MEG, 240*MEG, 33*MEG}; 	//Different data sizes for the tests (Bytes)
+	u16 data_delays[COMBINATIONS_PEAKS] = {125, 250, 500, 1000, 2000, 3000, 4000};  //CLOCKS
+	u32 data_lengths[6] = {1024};//128, 256, 512, 1024, 2048, 4096};			//Transaction Lengths for the traffic generator in 32 bit words
+
+	char mode_name[3][MAXC] = {"Data Peaks", "Constant Data Flow", "Random Peaks"};
+	char combinations[3];
+
+	combinations[TEST_PEAKS] = COMBINATIONS_PEAKS;
+	combinations[TEST_CONST] = COMBINATIONS_CONST;
+	combinations[TEST_RAND] = COMBINATIONS_RAND;
+
+
+#endif
+
+	/*
+	 * Check how much the time increases when disabling the use of the Cache!!
+	 */
+	//Xil_DCacheDisable();
+
+	xil_printf("\r\n\n---- Entered main() ----\r\n\n");
+
+
+	xil_printf("\n\n---- Peripheral Test Start ----\r\n");
+
+	if(peripheral_test(TEST_TX_ADDR) != XST_SUCCESS) return XST_FAILURE;
+
+	xil_printf("---- Peripheral Test End ----\r\n\n");
+
+
+	xil_printf("\n\n---- System Setup Start ----\r\n");
+	//Initialize the system
+	status = system_setup();
+	if (status == XST_FAILURE){
+		xil_printf("System setup failed\n\r");
+		return XST_FAILURE;
+	}
+
+	xil_printf("---- System Setup End ----\r\n");
+
+
+
+
+	//Working LED
+	user_gpio_set_led(1, LED_B);
+
+	//Start Test
+    xil_printf("\n\n----	Tests Start	---\n\r");
+#ifndef LATENCY
+
+	for(k = 0; k < TESTS_S2MM; k++){
+		xil_printf("----Mode Test round %d----\r\n\n", k);
+		for(i = 0; i < MODES; i++){
+			switch (i){
+				case TEST_PEAKS:
+					for(j = 0; j < COMBINATIONS_PEAKS; j++){
+						tries = 0;
+						xil_printf("----Mode Peaks: Combination %d----\r\n", j);
+						while(user_tests_3_mode(transfer_packets[ACTIVE_PACKET_LENGTH], MODE_PEAKS | SUBMODE_LEN| SUBMODE_DELAY, data_lengths[PEAKS_LENGTH],
+								data_delays[j], TEST_RX_ADDR, &(results_modes[i][j][k])) != XST_SUCCESS){
+							xil_printf("[MAIN] Peak Test Failed\r\n");
+							if(++tries >= MAX_TRIES)return XST_FAILURE;
+						}
+					}
+					break;
+				case TEST_CONST:
+					for(j = 0; j < COMBINATIONS_CONST; j++){
+						tries = 0;
+						xil_printf("----Mode CONST: Combination %d----\r\n", j);
+						while(user_tests_3_mode(transfer_packets[ACTIVE_PACKET_LENGTH], MODE_CONST| SUBMODE_LEN, data_lengths[j], 0,
+								TEST_RX_ADDR, &(results_modes[i][j][k])) != XST_SUCCESS){
+							xil_printf("[MAIN] Constant Test Failed\r\n");
+							if(++tries >= MAX_TRIES)return XST_FAILURE;
+						}
+					}
+					break;
+				case TEST_RAND:
+					for(j = 0; j < COMBINATIONS_RAND; j++){
+						tries = 0;
+						xil_printf("----Mode RAND: Combination %d----\r\n", j);
+						while(user_tests_3_mode(transfer_packets[ACTIVE_PACKET_LENGTH], (MODE_RAND | SUBMODE_DELAY), data_lengths[j], 0,
+								TEST_RX_ADDR, &(results_modes[i][j][k])) != XST_SUCCESS){
+							xil_printf("[MAIN] Random Test Failed\r\n");
+							if(++tries >= MAX_TRIES)return XST_FAILURE;
+
+						}
+					}
+					break;
+				default:
+					return XST_FAILURE;
+				}
+		}
+	}
+
+#else
+    for(i = 0; i < TESTS_LATENCY; i++){
+    	xil_printf("\n\n ----Latency Test round %d----\r\n\n", i);
+    	status = user_tests_3_latency(&(results_latency[i]), TEST_RX_ADDR);
+    	if(status != XST_SUCCESS){
+    		xil_printf("[LATENCY] Test Failed\r\n");
+    		return XST_FAILURE;
+    	}
+    }
+
+#endif
+
+    //End Test
+    xil_printf("\n\n----	Tests End	---\n\n\r");
+
+    xil_printf("\n\n----	Result analysis Start	---\n\n\r");
+
+
+#ifndef LATENCY
+    for(i = 0; i < MODES; i++){
+    	xil_printf("Results for mode %s \r\n\n",  mode_name[i]);
+    	for(j = 0; j < combinations[i]; j++){
+    		xil_printf("\t---- Combination %d ----\r\n", j);
+    		status = user_tests_analyse_results(TESTS_S2MM, results_modes[i][j], &(average_modes[i][j]), AVERAGE_VISUALIZE);
+			if (status != XST_SUCCESS){
+				xil_printf("Result analysis failed\n");
+				return XST_FAILURE;
+			}
+    	}
+    }
+#else
+    xil_printf("Results for latency\r\n");
+    status = user_tests_analyse_results(TESTS_LATENCY, results_latency, &average_latency, AVERAGE_VISUALIZE | VISUALIZE_LATENCY);
+	if (status != XST_SUCCESS){
+		xil_printf("Result analysis failed\n");
+		return XST_FAILURE;
+	}
+
+#endif
+    xil_printf("\n\n----	Result analysis End	---\n\n\r");
+
+    user_gpio_set_led(0, LED_OFF);
+
+	xil_printf("\r\n\n----	Exiting main()	----\r\n");
+
+	return XST_SUCCESS;
+
+}
+
+//Configures the system, peripherals and interrupts
+int system_setup(void){
+	int status;
+
+    //Initialize GPIOs
+    status = user_gpio_init();
+    if (status != XST_SUCCESS){
+		xil_printf("GPIOs initialization failed\n\r");
+		return XST_FAILURE;
+	}
+    xil_printf("[SYS SETUP]GPIOs Initialised\n\r");
+
+
+    //Initialize DMA
+    status = user_axidma_init();
+    if (status != XST_SUCCESS){
+		xil_printf("DMA initialization failed\n\r");
+		return XST_FAILURE;
+	}
+    xil_printf("[SYS SETUP]DMA Initialised\n\r");
+
+    status = user_trafgen_init();
+    if(status != XST_SUCCESS){
+    	xil_printf("Traffic generator initialization failed\n\r");
+		return XST_FAILURE;
+    }
+    xil_printf("[SYS SETUP]Traffic Generator Initialised\n\r");
+
+    return XST_SUCCESS;
+}
+
+int peripheral_test(u32 address){
+	//Fill DDR for test start
+	user_tests_fillDDR(address, NBYTES, EMPTY);
+
+	return XST_SUCCESS;
+}
+
+
+
+

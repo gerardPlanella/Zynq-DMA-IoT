@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="mem_test" location="/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/mem_test" platform="/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/env1_cora.xpfm" platformUID="xilinx:cora-z7-07s::0.0(custom)" systemProject="mem_test_system" sysConfig="env1_cora" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="2874ffe8a7154b1cac284a2fec32450b">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.430684036">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1488275396" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="memory_tests"/>
+</sdkproject:SdkProject>

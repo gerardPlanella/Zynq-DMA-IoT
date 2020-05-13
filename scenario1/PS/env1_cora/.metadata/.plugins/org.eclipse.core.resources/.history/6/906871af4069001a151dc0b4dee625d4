@@ -1,0 +1,366 @@
+/*
+ * user_tests.c
+ *
+ *  Created on: Mar 8, 2020
+ *      Author: Gerard Planella Fontanillas
+ */
+
+#include "user_tests.h"
+
+//Performs a transaction from DDR to FIFO and then from FIFO to DDR
+int user_tests_1(u32 nBytes, Result results[SUB_TESTS], char mm2s){
+	int status;
+	int i;
+
+	//xil_printf("Entering profiling\r\n");
+	status = test_1_profiling_latency(nBytes, results, mm2s);
+	if(status != XST_SUCCESS){
+		xil_printf("[TEST] Profiling failed \r\n");
+		return XST_FAILURE;
+	}
+	xil_printf("Profiling Done");
+
+	status = test_1_dropping(nBytes, results, mm2s);
+	if(status != XST_SUCCESS){
+		xil_printf("[TEST] Profiling failed \r\n");
+		return XST_FAILURE;
+	}
+
+	for(i = 0; i < SUB_TESTS; i++){
+		results[i].throughput = (float)(results[i].bytes_transferred/((u32)results[i].t_total & 0x0000FFFF)) * (F_CLK_PL/1000000);
+	}
+
+
+
+
+
+
+	return XST_SUCCESS;
+}
+
+//Calculates t_profiling and t_latency and inserts the results into results[mm2s]
+int test_1_profiling_latency(u32 nBytes, Result results[SUB_TESTS], char mm2s){
+	DmaFlags flags;
+	FifoParams fifo;
+	int status;
+	u32 read;
+
+	/*
+	 * First part of the test: Latency and Profiling calculation
+	 */
+
+	xil_printf("Emptying DDR\n\r");
+	//Empty the DDR
+	if(user_tests_fillDDR(NBYTES, EMPTY) != XST_SUCCESS){
+		xil_printf("[TEST] Profiling: DDR empty failed \n\r");
+		return XST_FAILURE;
+	}
+
+	xil_printf("Emptying FIFO\r\n");
+	//Empty the FIFO
+	if(user_tests_fillFIFO(WORD, EMPTY) != XST_SUCCESS){
+		xil_printf("[TEST] Profiling: FIFO empty failed \r\n");
+		return XST_FAILURE;
+	}
+
+
+	if(mm2s == DMA_MM2S){
+		//Initialize DDR for transfer
+		xil_printf("Filling DDR\r\n");
+		if(user_tests_fillDDR(WORD, NEMPTY) != XST_SUCCESS){
+			xil_printf("[TEST] Profiling: DDR fill failed \n\r");
+			return XST_FAILURE;
+		}
+	}else{
+		//Initialize FIFO for transfer
+		xil_printf("Filling FIFO\r\n");
+		if(user_tests_fillFIFO(WORD, NEMPTY) != XST_SUCCESS){
+			xil_printf("[TEST] Profiling: FIFO empty failed \r\n");
+			return XST_FAILURE;
+		}
+	}
+	xil_printf("Restarting counters\r\n");
+	//Restart the counters
+	user_gpio_set_counter(2, COUNTER_SRESET);
+	user_gpio_set_counter(1, COUNTER_SRESET);
+
+	//We start with a transfer of one word in order to compute the latency time and profiling
+	user_gpio_set_counter(2, COUNTER_ENABLE);
+	xil_printf("Starting DMA transfer\n\r");
+	status = user_dma_transfer(mm2s, DDR_BASE_ADDR, (u32)WORD, DMA_PROFILING | DMA_LATENCY);
+	if(status != XST_SUCCESS){
+		user_gpio_set_counter(2, COUNTER_SRESET);
+		return XST_FAILURE;
+	}
+
+	xil_printf("DMA Flag Wait\n\r");
+	//Wait for the transfer to end
+	do{
+		user_dma_get_status(&flags);
+	}while(!flags.tx_done && !flags.error[(int)mm2s]);
+
+	//Check for errors in the transfer
+	if(flags.error[(int)mm2s] == DMA_FLAG_ACTIVE){
+		xil_printf("DMA Error flag activated\r\n");
+		return XST_FAILURE;
+	}
+	//We stop counter 1
+	user_gpio_set_counter(1, COUNTER_NOPTION);
+
+	//Check the memory to verify the transfer
+	if(mm2s == DMA_MM2S){
+		if(user_gpio_get_fifo(&fifo, FIFO_WRITE_CNT) != XST_SUCCESS){
+			xil_printf("[FIFO]: Get FIFO failed\r\n");
+			return XST_FAILURE;
+		}
+
+		if(fifo.write_count != (u32)WORD){
+			xil_printf("[FIFO] Write Count: %u\r\n", fifo.write_count);
+			return XST_FAILURE;
+		}
+
+	}else{
+		//We check if the transfer was successful
+		read = user_tests_readDDR(WORD);
+		if(read == DDR_READ_ERROR){
+			xil_printf("[DDR] Read Error\n\r");
+			return XST_FAILURE;
+		}
+	}
+
+
+	user_gpio_get_count(&(results[(int)mm2s].t_profiling), 1); //Counter 1 is started in user_dma_transfer() when DMA_PROFIING option is used
+	user_gpio_set_counter(2, COUNTER_SRESET);
+
+	user_gpio_get_count(&(results[(int)mm2s].t_latency), 2); //Counter 2 is stopped in user_dma_transfer() when DMA_LATENCY option is used
+	user_gpio_set_counter(1, COUNTER_SRESET);
+
+	xil_printf("Latency and Profiling calculated successfully");
+
+
+	return XST_SUCCESS;
+}
+//Calculates t_total, total_bytes and drop_rate and inserts the results into results[mm2s]
+int test_1_dropping(u32 nBytes, Result results[SUB_TESTS], char mm2s){
+	DmaFlags flags;
+	FifoParams fifo;
+	int status;
+	u32 read;
+
+	/*
+	 * Second part of the test: Throughput and drop rate calculation
+	 */
+	//Empty the DDR
+	if(user_tests_fillDDR(NBYTES, EMPTY) != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	//Empty the FIFO
+	if(user_tests_fillFIFO(NBYTES, EMPTY) != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	//Initialize the DDR
+	if(mm2s == DMA_MM2S){
+		if(user_tests_fillDDR(NBYTES, NEMPTY) != XST_SUCCESS){
+			return XST_FAILURE;
+		}
+	}else{
+		//Initialize FIFO for transfer
+		if(user_tests_fillFIFO(NBYTES, NEMPTY) != XST_SUCCESS){
+			return XST_FAILURE;
+		}
+	}
+
+
+	//Reset and enable counter 1
+	user_gpio_set_counter(1, COUNTER_SRESET);
+	user_gpio_set_counter(1, COUNTER_ENABLE);
+
+	//Configure and start the DMA transfer
+	status = user_dma_transfer(mm2s, DDR_BASE_ADDR, (u32)WORD, DMA_NOPTION);
+	if(status != XST_SUCCESS){
+		user_gpio_set_counter(1, COUNTER_SRESET);
+		return XST_FAILURE;
+	}
+
+	//Wait for the transfer to end
+	do{
+		user_dma_get_status(&flags);
+	}while(!flags.tx_done && !flags.error[(int)mm2s]);
+
+	if(flags.error[(int)mm2s] == DMA_FLAG_ACTIVE){
+		return XST_FAILURE;
+	}
+	//We stop counter 1
+	user_gpio_set_counter(1, COUNTER_NOPTION);
+
+	//Read from counter 1 the total time taken
+	user_gpio_get_count(&(results[(int)mm2s].t_total), 1);
+	user_gpio_set_counter(1, COUNTER_SRESET);
+
+	//Check the memory to verify the transfer
+	if(mm2s == DMA_MM2S){
+		if(user_gpio_get_fifo(&fifo, FIFO_WRITE_CNT) != XST_SUCCESS) return XST_FAILURE;
+		read = fifo.write_count;
+	}else{
+		//We check if the transfer was successful
+		read = user_tests_readDDR(NBYTES);
+		if(read == DDR_READ_ERROR){
+			return XST_FAILURE;
+		}
+		results[(int)mm2s].bytes_transferred = read;
+		results[(int)mm2s].drop_rate = (float)((u32)NBYTES - read)/NBYTES;
+
+	}
+
+
+	xil_printf("Transferred Bytes and Drop rate calculated successfully\n");
+
+	return XST_SUCCESS;
+
+}
+
+//Analyzes the results from every test
+int user_tests_analyse_results(Result results[TESTS][SUB_TESTS], Result average[SUB_TESTS], char visualize){
+	int i, j;
+	Result *current;
+	if(visualize == RESULTS_VISUALIZE)xil_printf("\n------- Results -------\n\n");
+
+	for(i = 0; i < SUB_TESTS; i++){
+		average[i].drop_rate = 0;
+		average[i].t_latency = 0;
+		average[i].t_profiling = 0;
+		average[i].t_total = 0;
+		average[i].throughput = 0;
+	}
+
+	for(i = 0; i < TESTS; i++){
+		if (visualize == RESULTS_VISUALIZE) xil_printf("\n---- Test [%d] ----\n", i);
+		for(j = 0; j < SUB_TESTS; j++){
+
+			current = &results[i][j];
+
+			if (visualize == RESULTS_VISUALIZE){
+				xil_printf("\t---- Sub-test [%d] ----\n\r", j);
+				xil_printf("\t\tTotal time: %u s\n\r"			, current->t_total);
+				xil_printf("\t\tTotal Transfer: %d s\n\r"			, NBYTES);
+				xil_printf("\t\tThroughput: %f MBps\n\r" 		, current->throughput);
+				xil_printf("\t\tDrop Rate: %f\n\r"			, current->drop_rate);
+				xil_printf("\t\tLatency: %u s\n\r"			, current->t_latency);
+				xil_printf("\t\tProfiling: %u or %d %%\n\r"	, current->t_profiling, (100 * (float)((current->t_total - current->t_profiling)/(current->t_total))));
+			}
+
+			average[j].throughput  += (current->throughput  /TESTS);
+			average[j].drop_rate   += (current->drop_rate   /TESTS);
+			average[j].t_total 	   += (current->t_total     /TESTS);
+			average[j].t_profiling += (current->t_profiling /TESTS);
+			average[j].t_latency   += (current->t_latency   /TESTS);
+
+		}
+	}
+	if (visualize == RESULTS_VISUALIZE){
+		current = &average[j];
+		xil_printf("\t---- Average Results ----\n\r", j);
+
+		xil_printf("\t\tTotal time: %u s\n\r"			, current->t_total);
+		xil_printf("\t\tTotal Transfer: %d s\n\r"		, NBYTES);
+		xil_printf("\t\tThroughput: %f MBps\n\r" 		, current->throughput);
+		xil_printf("\t\tDrop Rate: %f\n\r"			, current->drop_rate);
+		xil_printf("\t\tLatency: %u s\n\r"			, current->t_latency);
+		xil_printf("\t\tProfiling: %u or %d %%\n\r"	, current->t_profiling, (100 * (float)((current->t_total - current->t_profiling)/(current->t_total))));
+
+	}
+
+
+	return XST_SUCCESS;
+
+}
+
+//Fills RAM with nBytes bytes, incrementing by 0x1h and starting at XPAR_PS7_DDR_0_S_AXI_BASEADDR with the value 1
+int user_tests_fillDDR(u32 nBytes, char empty){
+	int i = 0;
+	u16 value = 0;
+
+	if (DDR_BASE_ADDR + nBytes >= DDR_HIGH_ADDR){
+		return XST_FAILURE;
+	}
+
+	for(i = 0; i < (int)nBytes; i+=2){
+		Xil_Out16(DDR_BASE_ADDR + i, value);
+		if(empty == NEMPTY) value++;
+		//xil_printff2("Writing %u at address 0x%x \r\n", value++, DDR_BASE_ADDR + i);
+	}
+
+	xil_printf("Data written from 0x%x to 0x%x\r\n", DDR_BASE_ADDR, DDR_BASE_ADDR + i);
+
+	return XST_SUCCESS;
+}
+
+//Returns the total number of bytes written in the RAM
+u32 user_tests_readDDR(u32 nBytes){
+	u16 i = 0;
+	u16 j = 0;
+	u16 value = 0;
+	u16 words = (u16) WORDS(nBytes);
+
+	if (DDR_BASE_ADDR + words >= DDR_HIGH_ADDR){
+		return DDR_READ_ERROR;
+	}
+
+	for(j = 0; j < words; j+=0x1){
+		value = Xil_In16(DDR_BASE_ADDR + (u32)i);
+		//xil_printf("Reading DDR: value %u for at 0x%x\r\n", value, DDR_BASE_ADDR + (u32)i);
+		if(value != j){
+			xil_printf("DDR Read: Requested = %u, Read = %u \r\n", nBytes, i + 0x02);
+			return i + 0x2;
+		}
+		i = i + 0x2;
+
+	}
+	xil_printf("DDR Read: Requested = %u, Read = %u \r\n", nBytes, i);
+	return (u32) i;
+}
+
+//If empty is NEMPTY the FIFO is filled with nBytes bytes. If empty is EMPTY the FIFO is restarted
+int user_tests_fillFIFO(u32 nBytes, char empty){
+	u32 bytesWritten = 0, toWrite = 0;
+	DmaFlags flags;
+	int status;
+	FifoParams fifo;
+
+	if (empty == EMPTY){
+		status = user_gpio_reset_fifo();
+		if (status == XST_FAILURE) xil_printf("FIFO reset failed\n\r");
+		return status;
+
+	}
+
+	if (empty == NEMPTY){
+		user_tests_fillDDR(nBytes, NEMPTY);
+		while(!fifo.full){
+			toWrite = nBytes - bytesWritten;
+			if(toWrite < 4) toWrite = 4;
+			if(user_dma_transfer(DMA_MM2S, DDR_BASE_ADDR + bytesWritten, (u32)(toWrite), DMA_NOPTION) != XST_SUCCESS){
+				xil_printf("FIFO Fill: DMA Transfer Error\n\r");
+				return XST_FAILURE;
+			}
+
+			do{
+				user_dma_get_status(&flags);
+			}while(!flags.tx_done && !flags.error[DMA_MM2S]);
+
+			if(flags.error[DMA_MM2S]){
+				xil_printf("FIFO Fill: DMA Flag Error\n\r");
+				return XST_FAILURE;
+			}
+
+			if(user_gpio_get_fifo(&fifo, FIFO_WRITE_CNT  | FIFO_FULL) != XST_SUCCESS) return XST_FAILURE;
+			bytesWritten =((fifo.write_count << 1) & ~0x1 );
+			xil_printf("Bytes written: %u\n\r", bytesWritten);
+		}
+		return XST_SUCCESS;
+	}
+	xil_printf("Wrong FIFO empty option \r\n");
+	return XST_FAILURE;
+}

@@ -1,0 +1,10 @@
+10:45:14 **** Incremental Build of configuration Debug for project periph_test_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/env1_cora.xpfm -domains standalone_domain -bifpath /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/periph_test_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/env1_cora.xpfm --sys_config env1_cora --bif /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/periph_test_system/Debug/system.bif --bitstream /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/periph_test/_ide/bitstream/env_1_wrapper.bit --elf /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/periph_test/Debug/periph_test.elf,ps7_cortexa9_0
+creating BOOT.BIN using /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/periph_test/_ide/bitstream/env_1_wrapper.bit
+Running /opt/Xilinx/Vitis/2019.2/bin/bootgen  -image /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/periph_test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+10:45:20 Build Finished (took 6s.75ms)
+

@@ -1,0 +1,7 @@
+/*Env2_1_cora*/
+the_ROM_image:
+{
+  [bootloader]<Env2_1_cora/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

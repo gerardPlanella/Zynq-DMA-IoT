@@ -1,0 +1,131 @@
+/*H**********************************************************************
+* FILENAME :        main.c             DESIGN REF: E1T1
+*
+* DESCRIPTION :
+*       Main file for test in environment 1
+*
+* AUTHOR :    Gerard Planella        START DATE :    6 Mar 2020
+*
+*H*/
+
+#include <stdio.h>
+
+#include "xparameters.h"
+#include "xdebug.h"
+#include "platform.h"
+#include "xil_types.h"
+
+/*---- User Libraries ---- */
+#include "user_gpio.h"
+#include "user_dma.h"
+
+#include "user_interrupts.h"
+#include "user_tests.h"
+
+#define DEGUG
+
+#ifdef DEBUG
+	extern void xil_printf(const char *format, ...);
+#endif
+
+//Configures the system, peripherals and interrupts
+int system_setup(void);
+
+int main()
+{
+	int status, i = 0;
+	Result results[TESTS][SUB_TESTS];
+	Result average[SUB_TESTS];
+	u32 reads;
+
+
+	xil_printf("\r\n\n\t---- Entered Main ----\r\n\n");
+
+	//Initialize the system
+	status = system_setup();
+	if (status != XST_SUCCESS){
+		xil_printf("System setup failed\n\r");
+		return XST_FAILURE;
+	}
+
+
+    //Fill DDR for test start
+    user_tests_fillDDR(NBYTES,NEMPTY);
+    xil_printf("Filled DDR\n\r");
+
+	reads = user_tests_readDDR(NBYTES);
+	xil_printf("Reads: %u\n\r", reads)
+
+
+	//Start Test
+    xil_printf("\n\n----	Test start	---\n\n\r");
+
+    for(i = 0; i < TESTS; i++){
+    	status = user_tests_1(NBYTES, results[i], DMA_MM2S);
+    	if (status != XST_SUCCESS){
+			xil_printf("Error performing test number %d: MM2S\n\r", i);
+			return XST_FAILURE;
+		}
+    	status = user_tests_1(NBYTES, results[i], DMA_S2MM);
+		if (status != XST_SUCCESS){
+			xil_printf("Error performing test number %d: S2MM\n\r", i);
+			return XST_FAILURE;
+		}
+    }
+
+    //End Test
+    xil_printf("\n\n----	Test end	---\n\n\r");
+
+    xil_printf("\n\n----	Result analysis start	---\n\n\r");
+
+    status = user_tests_analyse_results(results, average ,RESULTS_VISUALIZE);
+    if (status != XST_SUCCESS){
+		xil_printf("Result analysis failed\n");
+		return XST_FAILURE;
+	}
+
+    //TODO: Save results to SD_CARD?
+
+	cleanup_platform();
+	xil_printf("----	Exiting main()	----\r\n");
+
+	return XST_SUCCESS;
+
+}
+
+//Configures the system, peripherals and interrupts
+int system_setup(void){
+	int status;
+	//Initializes UART and enables Caches
+    init_platform();
+
+    //Initialize GPIOs
+    status = user_gpio_init();
+    if (status != XST_SUCCESS){
+		xil_printf("GPIOs initialization failed\n\r");
+		return XST_FAILURE;
+	}
+
+    xil_printf("Initialized GPIOs\n\r");
+    //Initialize DMA
+    status = user_axidma_init();
+    if (status != XST_SUCCESS){
+		xil_printf("DMA initialization failed\n\r");
+		return XST_FAILURE;
+	}
+
+    xil_printf("Initialized DMA\n\r");
+
+    //Enable interrupt lines connected to DMA
+    user_interrupts_enable(1, 1);
+    //Enable DMA interrupts
+    user_axidma_interrupts_config(DMA_FLAG_ACTIVE);
+    xil_printf("Enabled Interruptions\r\n");
+
+    return XST_SUCCESS;
+}
+
+
+
+
+

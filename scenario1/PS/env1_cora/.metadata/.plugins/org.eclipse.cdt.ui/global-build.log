@@ -1,0 +1,36 @@
+Nothing to build in platform 'env1_cora'
+
+10:22:43 **** Incremental Build of configuration Debug for project test_1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/sw/env1_cora/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/user_tests.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/user_tests.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/sw/env1_cora/standalone_domain/bspinclude/include -MMD -MP -MF"src/user_tests.d" -MT"src/user_tests.o" -o "src/user_tests.o" "../src/user_tests.c"
+Finished building: ../src/user_tests.c
+ 
+Building target: test_1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/sw/env1_cora/standalone_domain/bsplib/lib -o "test_1.elf"  ./src/main.o ./src/user_dma.o ./src/user_gpio.o ./src/user_interrupts.o ./src/user_tests.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: test_1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size test_1.elf  |tee "test_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83200	   3488	  25312	 112000	  1b580	test_1.elf
+Finished building: test_1.elf.size
+ 
+10:22:44 **** Incremental Build of configuration Debug for project test_1_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/env1_cora.xpfm -domains standalone_domain -bifpath /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/test_1_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/env1_cora/export/env1_cora/env1_cora.xpfm --sys_config env1_cora --bif /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/test_1_system/Debug/system.bif --bitstream /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/test_1/_ide/bitstream/env_1_wrapper.bit --elf /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/test_1/Debug/test_1.elf,ps7_cortexa9_0
+creating BOOT.BIN using /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/test_1/_ide/bitstream/env_1_wrapper.bit
+Running /opt/Xilinx/Vitis/2019.2/bin/bootgen  -image /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env1_cora/test_1_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

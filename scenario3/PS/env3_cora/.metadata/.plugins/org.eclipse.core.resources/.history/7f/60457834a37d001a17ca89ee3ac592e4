@@ -1,0 +1,271 @@
+/*H**********************************************************************
+* FILENAME :        main.c             DESIGN REF: E1T1
+*
+* DESCRIPTION :
+*       Main file for test in environment 1
+*
+* AUTHOR :    Gerard Planella        START DATE :    6 Mar 2020
+*
+*H*/
+
+#include <stdio.h>
+
+#include "xparameters.h"
+#include "xdebug.h"
+#include "platform.h"
+#include "xil_types.h"
+
+/*---- User Libraries ---- */
+#include "user_gpio.h"
+#include "user_dma.h"
+#include "user_tests.h"
+#include "user_trafgen.h"
+
+#define TEST_PEAKS 0
+#define TEST_CONST 1
+#define TEST_RAND  2
+
+//#define LATENCY //Uncomment to perform latency test
+
+//Configures the system, peripherals and interrupts
+int system_setup(void);
+
+//int test_fifo(u32 address);
+int peripheral_test(u32 address);
+
+int main()
+{
+	int status, i, j, k;
+	//Result Variables
+#if LATENCY
+	Result results_latency[TESTS_LATENCY];
+	Result average_latency;
+#else
+	Result results_modes[MODES][COMBINATIONS][TESTS_S2MM];
+	Result average_modes[MODES][COMBINATIONS];
+
+	//Test Combinations and variables
+	u32 transfer_packets[COMBINATIONS] = {10*K, MEG, 64 * MEG}; //Different data sizes for the tests
+	u32 data_delays[COMBINATIONS] = {1000, 10000, 100000}; //nano seconds
+	u32 data_lengths[COMBINATIONS] = {250, 500, 2000};//Transaction Lengths for the traffic generator in 32 bit words
+	u32 rand_modes[COMBINATIONS] = {(MODE_RAND | SUBMODE_DELAY), (MODE_RAND | SUBMODE_LEN), (MODE_RAND | SUBMODE_DELAY | SUBMODE_LEN)};
+	u16 delay;
+	u64 aux;
+
+#endif
+
+	//Check how much the time increases when disabling the use of the Cache!!
+	//Xil_DCacheDisable();
+
+
+	xil_printf("\r\n\n---- Entered main() ----\r\n\n");
+
+	xil_printf("\n\n---- System Setup Start ----\r\n");
+	//Initialize the system
+	status = system_setup();
+	if (status == XST_FAILURE){
+		xil_printf("System setup failed\n\r");
+		return XST_FAILURE;
+	}
+	xil_printf("---- System Setup End ----\r\n");
+
+
+	xil_printf("\n\n---- Peripheral Test Start ----\r\n");
+
+	if(peripheral_test(TEST_TX_ADDR) != XST_SUCCESS) return XST_FAILURE;
+
+	xil_printf("---- Peripheral Test End ----\r\n\n");
+
+	//Working LED
+	user_gpio_set_led(1, LED_B);
+
+	//Start Test
+    xil_printf("\n\n----	Tests Start	---\n\r");
+#ifndef LATENCY
+
+	for(k = 0; k < TESTS_S2MM; k++){
+		xil_printf("----Mode Test round %d----\r\n\n", k);
+		for(i = 0; i < MODES; i++){
+			xil_printf("----Mode %d----\r\n\n", i);
+			for(j = 0; j < COMBINATIONS; j++){
+				xil_printf("----Combination %d----\r\n", j);
+				switch (i){
+					case TEST_PEAKS:
+						//Convert delay from ns to Clocks
+						aux = ((u64)data_delays[j] * F_CLK_PL) / GIG;
+						delay = (u16)(aux & 0xFFFF);
+
+						xil_printf("Main delay %u\r\n", delay);
+
+						if(user_tests_3_mode(transfer_packets[1], MODE_PEAKS | SUBMODE_LEN| SUBMODE_DELAY, data_lengths[1], (u16)(delay & 0xFFFF),
+								TEST_RX_ADDR, &(results_modes[i][j][k])) != XST_SUCCESS){
+							xil_printf("[MAIN] Peak Test Failed\r\n");
+							return XST_FAILURE;
+						}
+						break;
+					case TEST_CONST:
+						if(user_tests_3_mode(transfer_packets[1], MODE_CONST | SUBMODE_LEN, data_lengths[j], 0,
+								TEST_RX_ADDR, &(results_modes[i][j][k])) != XST_SUCCESS){
+							xil_printf("[MAIN] Constant Test Failed\r\n");
+							return XST_FAILURE;
+						}
+						break;
+					case TEST_RAND:
+						//Convert delay from ns to Clocks
+						aux = ((u64)data_delays[1] * F_CLK_PL) / GIG;
+						delay = (u16)(aux & 0xFFFF);
+						if(user_tests_3_mode(transfer_packets[1], rand_modes[j], data_lengths[1], (u16)(delay & 0xFFFF),
+								TEST_RX_ADDR, &(results_modes[i][j][k])) != XST_SUCCESS){
+							xil_printf("[MAIN] Random Test Failed\r\n");
+							return XST_FAILURE;
+						}
+						break;
+					default:
+						return XST_FAILURE;
+				}
+			}
+		}
+	}
+#else
+    for(i = 0; i < TESTS_LATENCY; i++){
+    	xil_printf("\n\n ----Latency Test round %d----\r\n\n", i);
+    	status = user_tests_3_latency(&(results_latency[i]), TEST_RX_ADDR);
+    	if(status != XST_SUCCESS){
+    		xil_printf("[LATENCY] Test Failed\r\n");
+    		return XST_FAILURE;
+    	}
+		/*if (status == XST_SUCCESS){
+			i++;
+		}else{
+			s2mm_ko++;
+		}
+		//Reset DMA
+		user_dma_reset();
+		xil_printf("\t\tS2MM DMA Blockages: %d out of %d\n\r", s2mm_ko, (s2mm_ko + TESTS_S2MM));
+		*/
+    }
+
+#endif
+
+    //End Test
+    xil_printf("\n\n----	Tests End	---\n\n\r");
+
+    xil_printf("\n\n----	Result analysis Start	---\n\n\r");
+#ifndef LATENCY
+    for(i = 0; i < MODES; i++){
+    	xil_printf("Results for mode %d \r\n", i);
+    	for(j = 0; j < COMBINATIONS; j++){
+    		xil_printf("\t---- Combination %d ----\r\n", j);
+    		status = user_tests_analyse_results(TESTS_S2MM, results_modes[i][j], &(average_modes[i][j]), RESULTS_VISUALIZE, 0);
+			if (status != XST_SUCCESS){
+				xil_printf("Result analysis failed\n");
+				return XST_FAILURE;
+			}
+    	}
+    }
+#else
+    xil_printf("Results for latency\r\n");
+    status = user_tests_analyse_results(TESTS_LATENCY, results_latency, &average_latency, RESULTS_VISUALIZE, VISUALIZE_LATENCY);
+	if (status != XST_SUCCESS){
+		xil_printf("Result analysis failed\n");
+		return XST_FAILURE;
+	}
+
+#endif
+    xil_printf("\n\n----	Result analysis End	---\n\n\r");
+
+    user_gpio_set_led(0, LED_OFF);
+	cleanup_platform();
+	xil_printf("\r\n\n----	Exiting main()	----\r\n");
+
+	return XST_SUCCESS;
+
+}
+
+//Configures the system, peripherals and interrupts
+int system_setup(void){
+	int status;
+	//Initializes UART and enables Caches
+    init_platform();
+
+    //Initialize GPIOs
+    status = user_gpio_init();
+    if (status != XST_SUCCESS){
+		xil_printf("GPIOs initialization failed\n\r");
+		return XST_FAILURE;
+	}
+
+    //Initialize DMA
+    status = user_axidma_init();
+    if (status != XST_SUCCESS){
+		xil_printf("DMA initialization failed\n\r");
+		return XST_FAILURE;
+	}
+
+    xil_printf("Hey");
+    status = user_trafgen_init();
+    if(status != XST_SUCCESS){
+    	xil_printf("Traffic generator initialization failed\n\r");
+		return XST_FAILURE;
+    }
+    xil_printf("Hey");
+    return XST_SUCCESS;
+}
+
+int peripheral_test(u32 address){
+	  //Fill DDR for test start
+
+	user_tests_fillDDR(address, NBYTES, EMPTY);
+
+	//if(test_fifo(address) != XST_SUCCESS) return XST_FAILURE;
+
+	return XST_SUCCESS;
+}
+
+/*
+int test_fifo(u32 address){
+	FifoParams fifo;
+
+    if(user_tests_fillFIFO(address, NBYTES, EMPTY) != XST_SUCCESS){
+			xil_printf("FIFO empty failed \r\n");
+			return XST_FAILURE;
+	}
+
+    if(user_gpio_get_fifo(&fifo, FIFO_ALL) != XST_SUCCESS){
+		xil_printf("[FIFO]: Get FIFO failed\r\n");
+		return XST_FAILURE;
+	}
+
+    xil_printf("Empty FIFO 1: \n\r\tWrite Count %u\n\r\tRead Count %u\n\r\tRD Busy %x\n\r\tWR BUSY %x\n\r\tUDF %x\n\r\tOVF %x\n\n\r", fifo.wr_count, fifo.rd_count, fifo.rd_busy, fifo.wr_busy, fifo.udf_err, fifo.ovf_err);
+
+    if(user_tests_fillFIFO(address, NBYTES, NEMPTY) != XST_SUCCESS){
+    		xil_printf("FIFO full failed \r\n");
+    		return XST_FAILURE;
+    }
+
+    if(user_gpio_get_fifo(&fifo, FIFO_ALL) != XST_SUCCESS){
+   		xil_printf("[FIFO]: Get FIFO failed\r\n");
+   		return XST_FAILURE;
+   	}
+
+    xil_printf("Full FIFO: \n\r\tWrite Count %u\n\r\tRead Count %u\n\r\tRD Busy %x\n\r\tWR BUSY %x\n\r\tUDF %x\n\r\tOVF %x\n\n\r", fifo.wr_count, fifo.rd_count, fifo.rd_busy, fifo.wr_busy, fifo.udf_err, fifo.ovf_err);
+
+    if(user_tests_fillFIFO(address, NBYTES, EMPTY) != XST_SUCCESS){
+			xil_printf("FIFO empty failed \r\n");
+			return XST_FAILURE;
+	}
+
+    if(user_gpio_get_fifo(&fifo, FIFO_ALL) != XST_SUCCESS){
+   		xil_printf("[FIFO]: Get FIFO failed\r\n");
+   		return XST_FAILURE;
+   	}
+
+    xil_printf("Empty FIFO 2: \n\r\tWrite Count %u\n\r\tRead Count %u\n\r\tRD Busy %x\n\r\tWR BUSY %x\n\r\tUDF %x\n\r\tOVF %x\n\n\r", fifo.wr_count, fifo.rd_count, fifo.rd_busy, fifo.wr_busy, fifo.udf_err, fifo.ovf_err);
+
+    return XST_SUCCESS;
+}
+*/
+
+
+
+

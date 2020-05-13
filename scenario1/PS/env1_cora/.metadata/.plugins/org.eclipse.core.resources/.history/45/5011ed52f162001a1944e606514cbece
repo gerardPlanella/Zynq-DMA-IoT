@@ -1,0 +1,86 @@
+/*
+ * user_tests.h
+ *
+ *  Created on: Mar 8, 2020
+ *      Author: Gerard Planella
+ */
+
+#ifndef SRC_USER_TESTS_H_
+#define SRC_USER_TESTS_H_
+
+#include <stdio.h>
+
+#include "xparameters.h"
+#include "xdebug.h"
+#include "platform.h"
+#include "xil_types.h"
+
+
+/*---- User Libraries ---- */
+#include "user_gpio.h"
+#include "user_dma.h"
+
+typedef struct{
+	u16 	t_profiling; //Time that the CPU interacts with the AXI DMA
+	u16 	t_latency;	// Time taken for a word transfer, from the moment the transfer is started by the DMA, to when it is received at the DDR
+	u16		t_total;	// Total time taken for a transaction, from its request to its completion
+	float 	drop_rate;	// Amount of bytes that failed to transfer as a factor of the total amount of bytes transferred (BER)
+	float	throughput; // Amount of Mega bytes per second transferred
+	u32 	bytes_transferred; //Total amount of bytes intended to transfer, includes failed ones
+}Result;
+
+#define DEBUG
+
+#ifdef DEBUG
+#define debug_printf(x, y) xil_printf(x, y)
+#define debug_print(x) xil_printf(x)
+#else
+#define debug_printf(x, y)
+#define debug_print(x)
+#endif
+
+
+
+#define NEMPTY 0
+#define EMPTY 1
+
+#define RESULTS_VISUALIZE  1
+#define RESULTS_NVISUALIZE 0
+
+#define DDR_READ_ERROR -1
+
+#define TESTS 1 //Total number of tests for averaging
+#define SUB_TESTS 2 //S2MM and MM2s
+
+#define K 1000
+#define NBYTES 20*K
+
+#define WORD 4
+
+#define F_CLK_PL XPAR_PS7_UART_0_UART_CLK_FREQ_HZ
+
+
+//Performs a transaction from DDR to FIFO and then from FIFO to DDR
+int user_tests_1(u32 nBytes, Result results[SUB_TESTS], char mm2s);
+
+//Analyzes the results from every test
+int user_tests_analyse_results(Result results[TESTS][SUB_TESTS], Result average[SUB_TESTS], char visualize);
+
+
+//Fills RAM with nBytes bytes, incrementing by 0x1h and starting at XPAR_PS7_DDR_0_S_AXI_BASEADDR
+int user_tests_fillDDR(u32 nBytes, char empty);
+
+//Returns the total number of bytes written in the RAM
+u32 user_tests_readDDR(u32 nBytes);
+
+//If empty is NEMPTY the FIFO is filled with nBytes bytes. If empty is EMPTY the FIFO is restarted
+int user_tests_fillFIFO(u32 nBytes, char empty);
+
+//Calculates t_profiling and t_latency and inserts the results into results[mm2s]
+int test_1_profiling_latency(u32 nBytes, Result results[SUB_TESTS], char mm2s);
+
+//Calculates t_total, total_bytes and drop_rate and inserts the results into results[mm2s]
+int test_1_dropping(u32 nBytes, Result results[SUB_TESTS], char mm2s);
+
+
+#endif /* SRC_USER_TESTS_H_ */

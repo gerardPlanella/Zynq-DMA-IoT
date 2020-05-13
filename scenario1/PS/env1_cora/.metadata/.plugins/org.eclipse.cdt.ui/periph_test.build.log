@@ -1,0 +1,7 @@
+14:30:28 **** Clean-only build of configuration Debug for project periph_test ****
+make clean 
+rm -rf  ./src/testperiph.o ./src/xaxidma_example_selftest.o ./src/xdevcfg_selftest_example.o ./src/xdmaps_example_w_intr.o ./src/xgpio_tapp_example.o ./src/xscugic_tapp_example.o ./src/xscutimer_intr_example.o ./src/xscutimer_polled_example.o ./src/xscuwdt_intr_example.o  ./src/testperiph.d ./src/xaxidma_example_selftest.d ./src/xdevcfg_selftest_example.d ./src/xdmaps_example_w_intr.d ./src/xgpio_tapp_example.d ./src/xscugic_tapp_example.d ./src/xscutimer_intr_example.d ./src/xscutimer_polled_example.d ./src/xscuwdt_intr_example.d  periph_test.elf.size  periph_test.elf
+ 
+
+14:30:28 Build Finished (took 67ms)
+

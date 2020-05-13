@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="FIFO read error" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="Fifo read error"/>
+			<item value="Invalidate"/>
+			<item value="Inval"/>
+			<item value="gpioStatus"/>
+			<item value="readDDR"/>
+			<item value="DDR_BASE_ADDR"/>
+			<item value="user_interrupts_axidma_config"/>
+			<item value="user_axidma_interrupts_config"/>
+			<item value="user_axidma_interrupts"/>
+			<item value="user"/>
+			<item value="u16"/>
+			<item value="user_gpio_get_count"/>
+			<item value="Direction"/>
+			<item value="InstancePtr"/>
+			<item value="BuffAddr"/>
+		</list>
+		<list key="replacehistory">
+			<item value="user_axidma_interrupts_config"/>
+			<item value="user_interrupts_axidma_config"/>
+			<item value="dir"/>
+			<item value="&amp;axiDma"/>
+			<item value="(UINTPTR) &amp;address"/>
+			<item value="nBytes"/>
+			<item value="axiDma."/>
+			<item value="address"/>
+			<item value="xil_printf"/>
+			<item value="user_tests_readDDR"/>
+			<item value="user_tests_fillDDR"/>
+			<item value="DMA_FLAG_"/>
+			<item value="DMA_FLAG"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="1389" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="396" key="DIALOG_HEIGHT"/>
+		<item value="219" key="DIALOG_X_ORIGIN"/>
+		<item value="544" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

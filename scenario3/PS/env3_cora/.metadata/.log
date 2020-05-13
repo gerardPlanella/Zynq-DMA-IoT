@@ -1,0 +1,1728 @@
+!SESSION 2020-05-13 09:37:47.241 -----------------------------------------------
+eclipse.buildId=2019.2
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+This is a continuation of log file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/.metadata/.bak_0.log
+Created Time: 2020-05-13 09:57:30.646
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.646
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.679
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.679
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.684
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.684
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.698
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.698
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.713
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.713
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.714
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.715
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.724
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.725
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.787
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:30.788
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:33.792
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:33.831
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:33.839
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:33.839
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:33.856
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:33.856
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:33.872
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:33.873
+!MESSAGE XSCT Command: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.080
+!MESSAGE XSCT command with result: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.103
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.125
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.126
+!MESSAGE XSCT Command: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.133
+!MESSAGE XSCT command with result: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, env_1_wrapper_7]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.133
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.135
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.136
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.146
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.146
+!MESSAGE XSCT Command: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.148
+!MESSAGE XSCT command with result: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.148
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.396
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.396
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.401
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.401
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.408
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.408
+!MESSAGE XSCT Command: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.692
+!MESSAGE XSCT command with result: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.693
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.717
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.728
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.787
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.788
+!MESSAGE XSCT Command: [con], Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:35.792
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-4: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:43.710
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:43.712
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:43.713
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:43.714
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-05-13 09:57:43.714
+!MESSAGE Generating MD5 hash for file: /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:43.715
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:43.716
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.210
+!MESSAGE XSCT Command: [disconnect tcfchan#17], Thread: Thread-947
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.213
+!MESSAGE XSCT command with result: [disconnect tcfchan#17], Result: [null, ]. Thread: Thread-947
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.247
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.251
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#18]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.251
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.260
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.260
+!MESSAGE XSCT Command: [version -server], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.261
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2.1]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.261
+!MESSAGE XSCT Command: [version], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.262
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2.1
+SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.262
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.267
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.267
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.284
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.284
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.290
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.290
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.305
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.305
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.310
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.311
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.326
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.326
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.331
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.331
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.346
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.346
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.351
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.351
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.365
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.366
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.370
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.370
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.384
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.384
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.399
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.399
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.400
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.401
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.410
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.410
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.473
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:46.474
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:49.477
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:49.513
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:49.521
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:49.521
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:49.538
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:49.538
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:49.555
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:49.555
+!MESSAGE XSCT Command: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.761
+!MESSAGE XSCT command with result: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.784
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.807
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.808
+!MESSAGE XSCT Command: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.823
+!MESSAGE XSCT command with result: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, env_1_wrapper_7]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.824
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.827
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.827
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.848
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.849
+!MESSAGE XSCT Command: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.852
+!MESSAGE XSCT command with result: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:50.852
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.097
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.098
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.104
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.105
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.111
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.111
+!MESSAGE XSCT Command: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.403
+!MESSAGE XSCT command with result: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.409
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.428
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.440
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.505
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.506
+!MESSAGE XSCT Command: [con], Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:57:51.510
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-10: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:58:58.859
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:58:58.861
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:58:58.862
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:58:58.863
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-05-13 09:58:58.864
+!MESSAGE Generating MD5 hash for file: /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:58:58.864
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:58:58.865
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.092
+!MESSAGE XSCT Command: [disconnect tcfchan#18], Thread: Thread-1010
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.095
+!MESSAGE XSCT command with result: [disconnect tcfchan#18], Result: [null, ]. Thread: Thread-1010
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.143
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.147
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#19]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.148
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.156
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.156
+!MESSAGE XSCT Command: [version -server], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.158
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2.1]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.158
+!MESSAGE XSCT Command: [version], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.158
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2.1
+SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.159
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.164
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.165
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.181
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.181
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.187
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.188
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.203
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.203
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.208
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.208
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.224
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.224
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.229
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.229
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.244
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.244
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.248
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.248
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.262
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.262
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.267
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.267
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.281
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.281
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.296
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.296
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.297
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.298
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.307
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.308
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.363
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:01.363
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:04.365
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:04.389
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:04.395
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:04.395
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:04.411
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:04.411
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:04.428
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:04.429
+!MESSAGE XSCT Command: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.635
+!MESSAGE XSCT command with result: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.658
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.682
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.684
+!MESSAGE XSCT Command: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.698
+!MESSAGE XSCT command with result: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, env_1_wrapper_7]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.699
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.705
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.706
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.729
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.730
+!MESSAGE XSCT Command: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.733
+!MESSAGE XSCT command with result: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:05.733
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:06.648
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:06.648
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:06.675
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:06.677
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:06.697
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:06.698
+!MESSAGE XSCT Command: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:07.006
+!MESSAGE XSCT command with result: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:07.006
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:07.030
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:07.045
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:07.117
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:07.117
+!MESSAGE XSCT Command: [con], Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 09:59:07.122
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:28.575
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:28.577
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:28.578
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:28.579
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-05-13 10:00:28.580
+!MESSAGE Generating MD5 hash for file: /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:28.581
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:28.582
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.812
+!MESSAGE XSCT Command: [disconnect tcfchan#19], Thread: Thread-1066
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.821
+!MESSAGE XSCT command with result: [disconnect tcfchan#19], Result: [null, ]. Thread: Thread-1066
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.859
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.863
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#20]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.863
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.872
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.872
+!MESSAGE XSCT Command: [version -server], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.873
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2.1]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.874
+!MESSAGE XSCT Command: [version], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.874
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2.1
+SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.875
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.880
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.880
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.900
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.901
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.906
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.906
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.923
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.923
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.929
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.929
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.946
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.946
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.952
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.952
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.968
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.968
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.973
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.974
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.990
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.990
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.996
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:29.996
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.013
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.013
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.031
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.031
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.032
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.033
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.045
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.046
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.097
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:30.097
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:33.101
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:33.140
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:33.149
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:33.149
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:33.170
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:33.170
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:33.190
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:33.191
+!MESSAGE XSCT Command: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.393
+!MESSAGE XSCT command with result: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.402
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.409
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.410
+!MESSAGE XSCT Command: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.414
+!MESSAGE XSCT command with result: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, env_1_wrapper_7]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.414
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.415
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.415
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.422
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.422
+!MESSAGE XSCT Command: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.423
+!MESSAGE XSCT command with result: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.424
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.642
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.642
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.649
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.649
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.655
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.656
+!MESSAGE XSCT Command: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.941
+!MESSAGE XSCT command with result: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.941
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.966
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:34.977
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:35.034
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:35.035
+!MESSAGE XSCT Command: [con], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:35.039
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:50.740
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:50.742
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:50.743
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:50.744
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-05-13 10:00:50.744
+!MESSAGE Generating MD5 hash for file: /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:50.745
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:50.746
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.722
+!MESSAGE XSCT Command: [disconnect tcfchan#20], Thread: Thread-1121
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.725
+!MESSAGE XSCT command with result: [disconnect tcfchan#20], Result: [null, ]. Thread: Thread-1121
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.785
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.790
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#21]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.790
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.799
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.799
+!MESSAGE XSCT Command: [version -server], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.800
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2.1]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.800
+!MESSAGE XSCT Command: [version], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.801
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2.1
+SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.801
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.807
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.807
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.823
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.824
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.829
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.829
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.845
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.845
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.850
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.850
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.865
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.865
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.870
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.870
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.884
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.885
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.889
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.889
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.903
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.903
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.907
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.907
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.921
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.922
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.938
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.939
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.940
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.940
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.950
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:52.950
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:53.002
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:53.003
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:56.005
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:56.044
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:56.054
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:56.055
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:56.081
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:56.081
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:56.099
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:56.099
+!MESSAGE XSCT Command: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.305
+!MESSAGE XSCT command with result: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.327
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.350
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.351
+!MESSAGE XSCT Command: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.365
+!MESSAGE XSCT command with result: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, env_1_wrapper_7]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.366
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.369
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.370
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.392
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.393
+!MESSAGE XSCT Command: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.395
+!MESSAGE XSCT command with result: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.395
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.647
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.647
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.653
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.653
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.660
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.660
+!MESSAGE XSCT Command: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.957
+!MESSAGE XSCT command with result: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.957
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.983
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:57.999
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:58.079
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:58.080
+!MESSAGE XSCT Command: [con], Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:00:58.085
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-0: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:18.074
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:18.078
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:18.086
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:18.088
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-05-13 10:01:18.088
+!MESSAGE Generating MD5 hash for file: /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:18.089
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:18.091
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-6: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.007
+!MESSAGE XSCT Command: [disconnect tcfchan#21], Thread: Thread-1180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.012
+!MESSAGE XSCT command with result: [disconnect tcfchan#21], Result: [null, ]. Thread: Thread-1180
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.062
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.067
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#22]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.067
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.076
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.076
+!MESSAGE XSCT Command: [version -server], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.078
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2.1]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.078
+!MESSAGE XSCT Command: [version], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.078
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2.1
+SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.079
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.083
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.084
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.100
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.101
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.109
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.109
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.127
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.127
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.133
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.133
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.150
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.151
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.155
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.156
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.171
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.172
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.176
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.176
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.192
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.192
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.197
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.197
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.212
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.212
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.227
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.228
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.229
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.229
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.239
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.239
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.296
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:20.297
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:23.301
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:23.340
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:23.348
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:23.349
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:23.372
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:23.372
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:23.390
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:23.391
+!MESSAGE XSCT Command: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.597
+!MESSAGE XSCT command with result: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.622
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.635
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.636
+!MESSAGE XSCT Command: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.644
+!MESSAGE XSCT command with result: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, env_1_wrapper_7]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.645
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.647
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.647
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.661
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.661
+!MESSAGE XSCT Command: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.663
+!MESSAGE XSCT command with result: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.664
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.940
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.940
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.946
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.946
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.952
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:24.953
+!MESSAGE XSCT Command: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:25.243
+!MESSAGE XSCT command with result: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:25.244
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:25.268
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:25.281
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:25.348
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:25.349
+!MESSAGE XSCT Command: [con], Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:01:25.354
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-6: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:30.237
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:30.241
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:30.241
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:30.243
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-05-13 10:02:30.244
+!MESSAGE Generating MD5 hash for file: /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:30.245
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:30.246
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/sw/env3_cora/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.272
+!MESSAGE XSCT Command: [disconnect tcfchan#22], Thread: Thread-1233
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.275
+!MESSAGE XSCT command with result: [disconnect tcfchan#22], Result: [null, ]. Thread: Thread-1233
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.328
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.333
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#23]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.334
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.343
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.343
+!MESSAGE XSCT Command: [version -server], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.344
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2.1]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.345
+!MESSAGE XSCT Command: [version], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.345
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2.1
+SW Build 2729669 on Thu Dec  5 04:48:12 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.346
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.352
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.353
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.369
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.369
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.374
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.374
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.390
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.390
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.395
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.396
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.410
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.410
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.415
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.415
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.431
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.431
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.436
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.436
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.450
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.450
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.455
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.455
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.469
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.469
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.486
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level == 0}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.486
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.487
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.488
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.498
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.498
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.554
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:32.555
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:35.557
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:35.595
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:35.603
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Cora Z7 - 7007S 210370AD79CAA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:35.604
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:35.626
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z007s (idcode 13723093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:35.626
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:35.646
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370AD79CAA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:35.646
+!MESSAGE XSCT Command: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.856
+!MESSAGE XSCT command with result: [fpga -file /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/bitstream/env_1_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.879
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.902
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.903
+!MESSAGE XSCT Command: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.919
+!MESSAGE XSCT command with result: [loadhw -hw /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3_cora/export/env3_cora/hw/env_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, env_1_wrapper_7]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.920
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.926
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.927
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.949
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.949
+!MESSAGE XSCT Command: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.952
+!MESSAGE XSCT command with result: [source /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:36.952
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.219
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.219
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.226
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.226
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.233
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.233
+!MESSAGE XSCT Command: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.517
+!MESSAGE XSCT command with result: [dow /home/gerard/Documents/TFG/ZynqDmaAnalysis/SW/env3_cora/env3/Debug/env3.elf], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.517
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.541
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.553
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.613
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.614
+!MESSAGE XSCT Command: [con], Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:02:37.619
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-1: Launching SystemDebugger_env3_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:06:20.624
+!MESSAGE XSCT Command: [disconnect tcfchan#23], Thread: Thread-1295
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-05-13 10:06:20.626
+!MESSAGE XSCT command with result: [disconnect tcfchan#23], Result: [null, ]. Thread: Thread-1295
